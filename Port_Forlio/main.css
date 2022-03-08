@@ -1,3 +1,11 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+/* font-family: 'Rubik Beastly', cursive; font-family: 'Fascinate Inline', cursive; font-family: 'Bungee Inline', cursive;
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -23,11 +31,13 @@ html {
     padding: 30px 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: all 0.3s ease;
+    background: #040a18;
 }
 
 .navbar.sticky {
     padding: 15px 0;
-    background: crimson;
+    background: #040a18;
+    color: #0b111e;
 }
 
 .navbar .max-width {
@@ -44,6 +54,9 @@ html {
 
 .navbar.sticky .logo a span {
     color: #fff;
+    animation-name: color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .navbar .logo a span {
@@ -62,15 +75,19 @@ html {
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
+    padding: 5px;
     transition: color 0.3s ease;
+    border-radius: 10px;
 }
 
 .navbar .menu li a:hover {
-    color: crimson;
+    color: #0b111e;
+    border: 2px solid #fff;
+    background: #fff;
 }
 
 .navbar.sticky .menu li a:hover  {
-    color: #fff;
+    color: #0b111e;
 }
 
 /* menu button style*/
@@ -86,13 +103,13 @@ html {
 /*home section style*/
 
 .home {
-    display: flex;
-    background-image: url("/images/DkNW19XUwAAgaCW.jpg");
-    height: 100%;
+    display: block;
+    background: #0b111e;
+    height: 100vh;
     background-size: cover;
     color: #fff;
     min-height: 500px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
 }
 
 .home .max-width {
@@ -101,12 +118,15 @@ html {
 
 .home .home-content .text-1 {
     font-size: 27px;
+    padding-top: 4%;
 }
 
 .home .home-content .text-2 {
-    font-size: 75px;
+    font-size: 100px;
     font-weight: 600;
     margin-left: -3px;
+    text-shadow: 2px 2px 2px  #aaa;
+    font-family: 'Rubik', cursive, vardana, sans-serif;
 }
 
 .home .home-content .text-3 {
@@ -115,25 +135,30 @@ html {
 }
 
 .home .home-content .text-3 span {
-    color: crimson;
+    color: #0b111e;
+    background: #fff;
     font-weight: 500;
+    font-family: 'Bungee Inline', cursive, vardana,sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: crimson;
+    background: #fff;
     padding: 10px;
-    color: #fff;
+    color: #0b111e;
     font-size: 25px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid #0b111e;
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: crimson;
+    color: #fff;
     background: none;
+    border: 2px solid #fff;
 }
 
 .iEmmzzyHost {
@@ -141,9 +166,29 @@ html {
     margin-top: 5px;
 }
 
+.home .social {
+    margin: auto;
+    width: 50%;
+    animation-name: social;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+
+.home .social .fab:hover {
+    background: #fff;
+}
+
+.home .social .fab {
+    font-size: 500%;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
 /* all similar styling*/
 section {
     padding: 100px 0;
+    justify-content: center;
+    justify-content: space-between;
 }
 
 .about, .services, .skills, .teams, .contact{
@@ -188,7 +233,7 @@ section .title::after{
    padding: 5px;
    left: 50%;
    font-size: 20px;
-   color: crimson;
+   color: #0b111e;
    height: 5px;
    background: #fff;
    transform: translateX(-50%);
@@ -196,7 +241,7 @@ section .title::after{
 
 /* about section*/
 .about .title::after {
-    content: "who i am"; 
+    content: "Who I Am"; 
 }
 
 .about .about-content .left {
@@ -208,6 +253,7 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+    border: 2px solid #0b111e;
 }
 
 .about .about-content .right  {
@@ -230,28 +276,35 @@ section .title::after{
 
 .about .about-content .right a {
     display: inline-block;
-    background: crimson;
+    background: #0b111e;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     margin-top: 20px;
     padding: 10px 30px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid #0b111e;
     transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover {
-    color: crimson;
+    color: #0b111e;
     background: none;
 }
 
 /* services section style*/
+.services .title::after {
+    content: "What I Know";
+    color: #fff;
+}
 
 .services, .teams {
     color: #fff;
-    background: #111;
+    background: #0b111e;
+    padding-top: 150px;
+    padding-bottom: 200px;
 }
+
 
 .services .title::before, 
 .teams .title::before {
@@ -260,23 +313,26 @@ section .title::after{
 
 .services .title::after, 
 .teams .title::after {
-    background: #111;
-    content: "what I provide";
+    background: #0b111e;
+    content: "What I Provide";
 }
 
 .services .serv-content .card {
     width: calc(34% - 20px);
-    background: #222;
+    background: #050e24;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 20px 25px;
     cursor: pointer;
     display: inline-flex;
     transition: all 0.3s ease;
+    border: 2px solid #fff;
 }
 
 .services .serv-content .card:hover {
-    background: crimson;
+    background: #fff;
+    color: #0b111e;
+    transition: all 0.01s ease;
 }
 
 .services .serv-content .card .box {
@@ -294,7 +350,7 @@ section .title::after{
 }
 
 .services .serv-content .card:hover .i {
-    background: #fff;
+    background: #0b111e;
 }
 
 .services .serv-content .card .text {
@@ -304,8 +360,14 @@ section .title::after{
 }
 
 /* skills section style */
+
+.skills {
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
 .skills .title::after {
-    content: "what I know";
+    content: "What I Know";
 }
 
 .skills .skills-content .column {
@@ -325,19 +387,19 @@ section .title::after{
 
 .skills .skills-content .left a {
     display: inline-block;
-    background: crimson;
+    background: #0b111e;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-top: 20px;
     padding: 8px 16px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid #0b111e;
     transition: all 0.3s ease;
 }
 
 .skills .skills-content .left a:hover {
-    color: crimson;
+    color: #0b111e;
     background: none;
 }
 
@@ -370,7 +432,7 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: #0b111e;
 }
 
 .skills-content .right .html::before {
@@ -397,19 +459,22 @@ section .title::after{
 /* teams section style */
 
 .teams .title::after {
-    content: "who with me";
+    content: "Who Is With Me";
+    color: #fff;
 }
 
 .teams .carousel .card {
-    background: #222;
+    background: #010a1b;
     border-radius: 6px;
+    border: 2px solid #fff;
     padding: 25px 35px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .teams .carousel .card:hover {
-    background: crimson;
+    background: #fff;
+    color: #0b111e;
 }
 
 .teams .carousel .card .box {
@@ -435,11 +500,11 @@ section .title::after{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid #fff;
 }
 
 .teams .carousel .card:hover  img{
-    border-color: #fff;
+    border-color: #0b111e;
 }
 
 .owl-dots {
@@ -470,7 +535,7 @@ section .title::after{
 
 /* contact section style */
 .contact .title::after {
-    content: "Get in touch";
+    content: "Get In Touch";
 }
 
 .contact .contact-content .column {
@@ -503,7 +568,7 @@ section .title::after{
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: crimson;
+    color: #0b111e;
 }
 
 .contact .contact-content .info .head {
@@ -567,8 +632,8 @@ section .title::after{
 .contact .right form .button button {
     width: 100%;
     height: 100%;
-    border: 2px solid crimson;
-    background: crimson;
+    border: 2px solid #0b111e;
+    background: #0b111e;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -578,13 +643,13 @@ section .title::after{
 }
 
 .contact .right form .button button:hover {
-    color: crimson;
+    color: #0b111e;
     background: none;
 }
 
 /* footer section style */
 footer {
-    background: #111;
+    background: #0b111e;
     padding: 20px 23px;
     color: #fff;
     text-align: center;
@@ -603,6 +668,26 @@ footer span a:hover {
 @media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
+    }
+
+    .home .social .fab {
+        font-size: 500%;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 40px;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+        padding: 5px;
+        transition: color 0.3s ease;
+        border-radius: 10px;
     }
 }
 
@@ -637,11 +722,37 @@ footer span a:hover {
         color: #333;
         font-size: 11px;
     }
+
+    
 }
 
 
 @media (max-width: 947px){
+
+    .home{
+        padding-top: 300px;
+    }
     
+    .social {
+        display: flex;
+        width: 10%;
+        padding-top: 50px;
+    }
+
+    .home .social .fab {
+        font-size: 500%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 10px;
+        padding-top: 100px;
+    }
+    .home .home-content .text-2 {
+        font-size: 5px;
+        
+        margin-left: -3px;
+        text-shadow: 2px 2px 2px  #aaa;
+    }
+
     .iEmmzzyHost {
         display: none;
     }
@@ -655,9 +766,9 @@ footer span a:hover {
         z-index: 999;
     }
 
-.menu-btn i.active:before {
+    .menu-btn i.active:before {
         content: "/food";
-}
+    }
     .navbar .menu {
         position: fixed;
         height: 100vh;
@@ -685,7 +796,7 @@ footer span a:hover {
     }
 
     .home .home-content .text-2 {
-        font-size: 70px;
+        font-size: 85px;
     }
     
     .home .home-content .text-3 {
@@ -697,7 +808,7 @@ footer span a:hover {
         padding: 10px 30px;
     }
 
-.max-width {
+    .max-width {
         max-width: 800px;
     }
 
@@ -736,9 +847,35 @@ footer span a:hover {
         color: #333;
         font-size: 11px;
     }
-}
+    .home .social .fab {
+        font-size: 500%;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+    .home .social {
+        margin: auto;
+        width: 50%;
+        animation-name: social;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
+    }
 
-@media (max-width: 690px){
+    .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+        padding: 5px;
+        transition: color 0.3s ease;
+        border-radius: 10px;
+    }
+}
+ 
+@media (max-width: 790px){
     .contact .contact-content .text {
         font-size: 15px;
         font-weight: 600;
@@ -773,22 +910,46 @@ footer span a:hover {
         font-weight: 600;
         font-size: 15px;
     }
-    
+
+    .home .social .fab {
+        font-size: 500%;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+        padding: 5px;
+        transition: color 0.3s ease;
+        border-radius: 10px;
+    }
     
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
+    .home{
+        padding-top: 150px;
+    }
     
     .home .home-content .text-2 {
         font-size: 50px;
     }
-    
     .home .home-content .text-3 {
         font-size: 27px;
     }
 
+    .contact {
+        display: inline-block;
+    }
     .contact .contact-content .column {
-        width: calc(50% - 30px);
+        width: calc(100%);
     }
 
     .contact .contact-content .info .head {
@@ -800,7 +961,200 @@ footer span a:hover {
         color: #333;
         font-size: 11px;
     }
+
+    .home .social .fab {
+        font-size: 500%;
+        text-align: center;
+        padding-right: 30px;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+        padding: 5px;
+        transition: color 0.3s ease;
+        border-radius: 10px;
+    }
+
+    .home .social {
+        margin: auto;
+        width: 80%;
+        animation-name: social;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
+    }
     
+    .contact .contact-content .text {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .contact .contact-content .left p {
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .contact .contact-content .left .icons {
+        margin: 5px 0;
+    }
+    
+    .contact .contact-content .row {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        margin-top: 0px;
+    }
+    
+    .contact .contact-content .row .info {
+        margin-left: 2px;
+    }
+    
+    .contact .contact-content .row i {
+        font-size: 25px;
+        color: #0b111e;
+    }
+    
+    .contact .contact-content .info .head {
+        font-weight: 500;
+    }
+    
+    .contact .contact-content .info .sub-title {
+        color: #333;
+        text-align: justify;
+        padding-right: 5px;
+    }
+    
+    .contact .right form .fields {
+        display: flex;
+    }
+    
+    .contact .contact-content .info .head {
+        font-weight: 600;
+    }
+    
+    .contact .right form .field,
+    .contact .right form .fields .field {
+        height: 45px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .contact .right form .textarea {
+        height: 80px;
+        width: 100%;
+    }
+    
+    .contact .right form .name {
+        margin-right: 10px;
+    }
+    
+    .contact .right form .email {
+        margin-left: 10px;
+    }
+    
+    .contact .right form .field input,
+    .contact .right form .textarea  textarea{
+        height: 100%;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .contact .right form .textarea  textarea {
+        padding-top: 10px;
+        resize: none;
+    }
+    
+    .contact .right form .button {
+        height: 47px;
+         width: 170px;
+    }
+    
+    .contact .right form .button button {
+        width: 100%;
+        height: 100%;
+        border: 2px solid #0b111e;
+        background: #0b111e;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .contact .right form .button button:hover {
+        color: #0b111e;
+        background: none;
+    }
+}
+
+/* key frames_ANIMATIONS */
+.home .home-content .text-1 {
+    animation-duration: 2s;
+  animation-name: hello;
+  animation-fill-mode: forwards;
 }
 
 
+.home .home-content .text-2  {
+  animation-duration: 2s;
+  animation-name: ease;
+}
+
+  @keyframes hello {
+    from {
+      margin-right: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  
+  @keyframes ease {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .navbar .logo a span {
+    animation-duration: 3s;
+    animation-name: mymove;
+  }
+  @keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;} 
+    50%  {top: 100px;}
+    75%  {top: 200px;}
+    100% {top: 0px;}
+  }
+
+
+  @keyframes color {
+      0% {color: yellow;}
+      25% {color: rgb(233, 117, 10);}
+      50% {color: rgb(7, 167, 92);}
+      100% {color: rgb(24, 71, 226);}
+
+    }
